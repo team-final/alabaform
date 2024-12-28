@@ -1,10 +1,50 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/56eb5d8c-0b26-4e55-bce1-6f9c0b92b717/deploy-status)](https://app.netlify.com/sites/albaform/deploys)
+[//]: # (## Quick Links)
 
-- [공통 env 바로가기](https://www.notion.so/jiin-seok/env-2ea174d5f28e4bc5befb198a0e907b40?pvs=4)
-- [컨벤션](https://jiin-seok.notion.site/b14745db3b5f44ddbd5b1614ec2d5bf7?pvs=4)
-- [프로젝트 칸반](https://github.com/orgs/team-final/projects/1?query=sort%3Aupdated-desc+is%3Aopen)
+[//]: # (### 결과 요약)
 
-### 사이트 주소
+[//]: # (- [RESULT.md]&#40;./documentation/RESULT.md&#41;)
 
-- [prod](https://main.d3jxl4gw15q26p.amplifyapp.com)
-- [dev](https://dev.d3jxl4gw15q26p.amplifyapp.com)
+[//]: # ()
+[//]: # (### 실행 방법)
+[//]: # (- [배포 사이트 &#40;production&#41;]&#40;https://main.d3jxl4gw15q26p.amplifyapp.com&#41;)
+[//]: # (- [배포 사이트 &#40;development&#41;]&#40;https://dev.d3jxl4gw15q26p.amplifyapp.com&#41;)
+
+[//]: # (- [로컬 호스트 실행 방법]&#40;./documentation/howToStart.md&#41;)
+
+<div style="text-align: center">  
+    <h1>  
+        <img alt="알바폼 로고" src='public/images/logo/logo-horizon.svg' height="50" /><br>  
+        알바폼: 알바 구인구직 플랫폼  
+    </h1>  
+    <a href="https://albaform.jiin-seok.net">바로가기</a>  
+</div>  
+
+**알바폼은 아르바이트를 주제로 한 구인・구직 플랫폼입니다.**
+
+지원하고 지원 받는 형태는 진료 예약, 원데이 클래스 수강 신청 등의 주제로 다양하게 변환될 수 있습니다.
+
+
+**1. 다양한 사용자 상태에 맞춰 UI와 권한이 달라지도록 했습니다.**
+
+- 사용자 상태 6종: 로그인 여부, 사장님/지원자 여부, 작성/지원 여부
+- 비인가 사용자의 접근을 차단하기 위해 렌더링 시점을 나누었습니다.
+
+**2. 모집 공고의 검색 엔진 최적화와 사용자 간의 인터랙션이 모두 중요한 점을 고려했습니다.**
+
+- 모집 공고의 SEO를 위해 페이지에 서버 사이드 렌더링을 적용하고, 인터랙션 영역은 클라이언트 사이드로 따로 렌더링했습니다.
+- Root Layout에서도 클라이언트 사이드 전역 설정을 분리해 서버 사이드 렌더링을 유지했습니다.
+
+**3. 조립식 컴포넌트로 디자인을 통일하고 통일성 유지가 용이하도록 했습니다.** (Compound Component Pattern)
+
+
+**4. 사용자의 편리한 경험에 유의했습니다.**
+
+- 지도가 뜨지 않는 상황을 방지하기 위해 주소는 도로명 주소 검색창을 통해서만 입력할 수 있습니다. 유효성 검사를 실시했습니다.
+- 반응형 뷰와 낙관적 업데이트를 적용했습니다.
+- 카카오 소셜 로그인, 카카오 공유하기가 가능합니다.
+
+
+**4. 개발자의 실수에 대비했습니다.**
+
+- 리니어 히스토리로 코드를 보호했습니다.
+- 에러 메시지가 없을 때에도 HTTP 상태 코드 기준의 기본 에러 메시지를 표시하도록 했습니다.
