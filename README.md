@@ -11,13 +11,15 @@
 
 [//]: # (- [로컬 호스트 실행 방법]&#40;./documentation/howToStart.md&#41;)
 
-<div style="text-align: center">  
+<div align="center">  
     <h1>  
         <img alt="알바폼 로고" src='public/images/logo/logo-horizon.svg' height="50" /><br>  
         알바폼: 알바 구인구직 플랫폼  
-    </h1>  
-    <a href="https://albaform.jiin-seok.net">바로가기</a>  
-</div>  
+    </h1>
+    <p />
+    <a href="https://albaform.jiin-seok.net">바로가기</a>
+    <p />
+</div>
 
 **알바폼은 아르바이트를 주제로 한 구인・구직 플랫폼입니다.**
 
