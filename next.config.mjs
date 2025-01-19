@@ -5,6 +5,9 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
+      externals: {
+        sharp: 'commonjs sharp',
+      },
     })
     return config
   },
